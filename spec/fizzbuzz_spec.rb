@@ -21,5 +21,19 @@ describe 'fizzbuzz' do
     expect(fizzbuzz(nil)).to eq nil
 	end
 
+
+    h={}
+    (-50..50).each do |n|
+        h[n] = 'fizz' if n%3 ==0 && n %5 !=0
+        h[n] = 'buzz' if n%3 !=0 && n %5 ==0
+        h[n] = 'fizzbuzz' if n%3 ==0 && n %5 ==0
+        h[n] = n if n%3 !=0 && n %5 !=0
+    end
+    h.each do |k,v|
+        it "returns #{v} when passed #{k}" do
+            expect(fizzbuzz(k)).to eq v
+       end
+   end
+
 end
 
