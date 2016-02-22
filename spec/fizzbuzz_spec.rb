@@ -5,7 +5,7 @@ describe 'fizzbuzz' do
     expect(fizzbuzz(3)).to eq 'fizz'
   end
       it 'returns "" when passed 4' do
-    expect(fizzbuzz(4)).to eq ''
+    expect(fizzbuzz(4)).to eq nil
     end
     it 'returns "buzz" when passed 5' do
     expect(fizzbuzz(5)).to eq 'buzz'
