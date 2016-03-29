@@ -1,4 +1,6 @@
-function FizzBuzz(number) {
+function FizzBuzz() {}
+
+FizzBuzz.prototype.play = function(number) {
     if(number === undefined){
       return undefined;
     }
